@@ -9,17 +9,17 @@ new project and blue app from master
 ====================================
 
     oc new-project bluegreen --display-name="Blue Green" --description='Blue Green Deployments'
-    oc new-app https://github.com/eformat/bluegreen#master --name=blue --strategy=sti
+    oc new-app https://github.com/m3r00t/bluegreen#master --name=blue --strategy=sti
 
 expose bluegreen service (using blue)
 =====================================
 
-    oc expose service blue --name=bluegreen --hostname=bluegreen.cloudapps.ose.eformat.co.nz
+    oc expose service blue --name=bluegreen
 
 green app deploy
 ================
 
-    oc new-app https://github.com/eformat/bluegreen#green --name=green --strategy=sti
+    oc new-app https://github.com/m3r00t/bluegreen#green --name=green --strategy=sti
 
 switch services to green
 ========================
@@ -34,4 +34,3 @@ and back again
 test application here
 =====================
 
-    http://bluegreen.cloudapps.ose.eformat.co.nz/
